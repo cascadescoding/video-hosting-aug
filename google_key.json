@@ -1,0 +1,16 @@
+{
+    "web": {
+        "client_id": "1059849849178-rqq7qnl4f3u0vqqimvrj3gnn0vvhdebu.apps.googleusercontent.com",
+        "project_id": "named-aspect-287620",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "pyLFO5h1yyfsozjWLqug9zgW",
+        "redirect_uris": [
+            "http://localhost:7000"
+        ],
+        "javascript_origins": [
+            "http://localhost:7000"
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+extends default
+
+block content
+
+    div.title
+        h1 Your New Videos
+
+    div.profile
+        div.profile-image(style =`background: url('/images/${vid.imgsrc}')no-repeat top center/cover;`)
+        .profile-details
+            h1.profile-name
+                | #{vid.title}
+            h2.profie.tagline
+                | #{vid.tagline}

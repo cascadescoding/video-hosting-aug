@@ -1,0 +1,23 @@
+extends default
+
+block header
+
+block content
+    div.profile
+        div.profile-image(style=`background:url('/images/${vid.imgSrc}')top center no-repeat; background-size: cover; `)
+        div.profile-details
+            h1.profile-name 
+                | #{vid.title}
+            h2.profile-tagline 
+                | #{vid.tagline}
+            h1.profile-name 
+                <iframe  width="560" height="315" src=#{vid.vidSrc} frameborder="0"   allowfullscreen ng-show="showvideo"></iframe>
+            
+            p.profile-bio 
+                | #{vid.desc}
+
+            a.button.button-video(href =`/video/delete/?id=${vid._id}`) 
+                |Delete Video
+
+            a.button.button-video(href =`${vid._pay}`) 
+                |Purchase Using Paypal

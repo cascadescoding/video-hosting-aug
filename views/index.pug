@@ -1,0 +1,42 @@
+extends default
+
+block content
+    //add route for second page
+    div.container
+        a(href="/addVideo")
+            |Add Video
+    
+    if loginFor && loginFor.email
+        div.container
+            a(href="/logout")
+                | #{loginFor.name}
+            a(href="/logout")
+                | Logout
+    else
+        div.container 
+            a(href="/login")
+                | Login
+    div.title
+        h1 YOUR  Videos
+    div.container   
+        each vid in yourVideos
+            div.video 
+                div.video-image(style=`background:url('/images/${vid.imgSrc}')no-repeat top center/cover;`)
+                h2.video-name 
+                    | #{vid.title}
+                a(href=`/video?id=${vid._id}`)
+                    | View
+
+    div.title 
+    div.title 
+        h1 All Videos
+    div.container 
+        each vid in allVideos
+            div.video
+                div.video-image(style=`background:url('/images/${vid.imgSrc}')no-repeat top center/cover;`)
+                h2.video-name 
+                    | #{vid.title} 
+                a(href=`/video?id=${vid._id}`)
+                    | Purchase
+
+    
